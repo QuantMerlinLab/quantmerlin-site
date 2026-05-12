@@ -34,28 +34,28 @@ export default function QuantMerlinWebsite() {
   return (
     <div className="min-h-screen bg-[#061C3F] text-white font-sans">
       {/* Header */}
-<header className="border-b border-yellow-500/20 bg-[#0B0B0B]/95 sticky top-0 z-50 backdrop-blur">
+<header className="border-b border-yellow-500/20 bg-[#064E3B]/95 sticky top-0 z-50 backdrop-blur">
   <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <div className="flex items-center gap-4">
       
-      {/* Logo QMA en SVG - Version pro */}
+      {/* Logo QMA en SVG - Version vert citron + texte blanc */}
 <svg viewBox="0 0 100 100" className="w-16 h-16">
-  {/* Cercle de fond */}
+  {/* Cercle de fond vert citron */}
   <defs>
     <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#facc15" />
-      <stop offset="100%" stopColor="#ca8a04" />
+      <stop offset="0%" stopColor="#bef264" />
+      <stop offset="100%" stopColor="#84cc16" />
     </linearGradient>
   </defs>
   <circle cx="50" cy="50" r="48" fill="url(#logoGrad)" />
   
-  {/* Triangle Q-M-A */}
-  <text x="50" y="42" textAnchor="middle" className="fill-black font-black text-[14px]" style={{ fontFamily: 'system-ui, sans-serif' }}>Q</text>
-  <text x="32" y="68" textAnchor="middle" className="fill-black font-black text-[14px]" style={{ fontFamily: 'system-ui, sans-serif' }}>M</text>
-  <text x="68" y="68" textAnchor="middle" className="fill-black font-black text-[14px]" style={{ fontFamily: 'system-ui, sans-serif' }}>A</text>
+  {/* Triangle Q-M-A en BLANC */}
+  <text x="50" y="42" textAnchor="middle" className="fill-white font-black text-[14px]" style={{ fontFamily: 'system-ui, sans-serif' }}>Q</text>
+  <text x="32" y="68" textAnchor="middle" className="fill-white font-black text-[14px]" style={{ fontFamily: 'system-ui, sans-serif' }}>M</text>
+  <text x="68" y="68" textAnchor="middle" className="fill-white font-black text-[14px]" style={{ fontFamily: 'system-ui, sans-serif' }}>A</text>
   
   {/* Effet de brillance optionnel */}
-  <ellipse cx="35" cy="30" rx="20" ry="12" fill="white" opacity="0.2" transform="rotate(-30 35 30)" />
+  <ellipse cx="35" cy="30" rx="20" ry="12" fill="white" opacity="0.25" transform="rotate(-30 35 30)" />
 </svg>
 
       <div>
@@ -198,40 +198,59 @@ export default function QuantMerlinWebsite() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="bg-gradient-to-br from-[#0a1528] to-[#07101d] border border-yellow-500/20 rounded-[2rem] p-10 md:p-14 shadow-2xl text-center">
-            <p className="uppercase tracking-[0.3em] text-yellow-400 text-sm font-bold mb-4">
-              Contact & Réseau
-            </p>
+<section className="py-24">
+  <div className="max-w-5xl mx-auto px-6">
+    <div className="bg-gradient-to-br from-[#0a1528] to-[#07101d] border border-yellow-500/20 rounded-[2rem] p-10 md:p-14 shadow-2xl text-center">
+      <p className="uppercase tracking-[0.3em] text-yellow-400 text-sm font-bold mb-4">
+        Contact & Réseau
+      </p>
 
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
-              Construisons votre autonomie financière
-            </h2>
+      <h2 className="text-4xl md:text-5xl font-black mb-6">
+        Construisons votre autonomie financière
+      </h2>
 
-            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-              Rejoignez QuantMerlin Analytics pour accéder à des analyses de marché, des formations et une approche quantitative des investissements.
-            </p>
+      <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
+        Rejoignez QuantMerlin Analytics pour accéder à des analyses de marché, des formations et une approche quantitative des investissements.
+      </p>
 
-            <div className="grid md:grid-cols-3 gap-6 text-left">
-              <div className="bg-[#102B5C] p-6 rounded-2xl border border-white/5">
-                <p className="text-gray-400 mb-2">Téléphone</p>
-                <h3 className="text-xl font-bold">+237 656 545 451</h3>
-              </div>
+      {/* ✅ Grille contact avec gestion du texte long */}
+      <div className="grid md:grid-cols-3 gap-6 text-left">
+  
+  {/* Téléphone */}
+  <div className="bg-[#102B5C] p-6 rounded-2xl border border-white/5 min-w-0 flex items-start gap-3">
+    <span className="text-yellow-400 text-xl">📞</span>
+    <div>
+      <p className="text-gray-400 text-sm">Téléphone</p>
+      <h3 className="text-base font-bold break-all text-white">+237 656 545 451</h3>
+    </div>
+  </div>
 
-              <div className="bg-[#102B5C] p-6 rounded-2xl border border-white/5">
-                <p className="text-gray-400 mb-2">Email</p>
-                <h3 className="text-xl font-bold">quantmerlinanalytics@gmail.com</h3>
-              </div>
+  {/* Email */}
+  <div className="bg-[#102B5C] p-6 rounded-2xl border border-white/5 min-w-0 flex items-start gap-3">
+    <span className="text-yellow-400 text-xl">✉️</span>
+    <div>
+      <p className="text-gray-400 text-sm">Email</p>
+      <a href="mailto:quantmerlinanalytics@gmail.com" className="text-base font-bold break-all text-yellow-400 hover:underline">
+        quantmerlinanalytics@gmail.com
+      </a>
+    </div>
+  </div>
 
-              <div className="bg-[#102B5C] p-6 rounded-2xl border border-white/5">
-                <p className="text-gray-400 mb-2">Site Web</p>
-                <h3 className="text-xl font-bold text-yellow-400">quantmerlinanalytics.com</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* Site Web */}
+  <div className="bg-[#102B5C] p-6 rounded-2xl border border-white/5 min-w-0 flex items-start gap-3">
+    <span className="text-yellow-400 text-xl">🌐</span>
+    <div>
+      <p className="text-gray-400 text-sm">Site Web</p>
+      <a href="https://quantmerlinanalytics.com" target="_blank" rel="noopener noreferrer" className="text-base font-bold break-all text-yellow-400 hover:underline">
+        quantmerlinanalytics.com
+      </a>
+    </div>
+  </div>
+  
+</div>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="border-t border-yellow-500/10 py-8 bg-[#000000]">
