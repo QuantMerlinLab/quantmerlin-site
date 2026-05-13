@@ -230,8 +230,8 @@ export default function QuantMerlinWebsite() {
     <span className="text-yellow-400 text-xl">✉️</span>
     <div>
       <p className="text-gray-400 text-sm">Email</p>
-      <a href="mailto:quantmerlinanalytics@gmail.com" className="text-base font-bold break-all text-yellow-400 hover:underline">
-        quantmerlinanalytics@gmail.com
+      <a href="mailto:contact@quantmerlinanalytics.com" className="text-base font-bold break-all text-yellow-400 hover:underline">
+        contact@quantmerlinanalytics.com
       </a>
     </div>
   </div>
