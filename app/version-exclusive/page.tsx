@@ -177,6 +177,12 @@ const handleSubmit = async () => {
               Recevoir mon exemplaire gratuit
             </h2>
 
+            <p className="text-center text-gray-300 mb-8">
+              📩 Entrez votre prénom et votre adresse email pour recevoir
+              immédiatement votre exemplaire gratuit du Manuel d'Intelligence
+              Financière Premium-Version Exclusive.
+           </p>
+
             <div className="space-y-6">
 
               <input

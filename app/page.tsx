@@ -1,18 +1,14 @@
 import Link from "next/link";
 export default function QuantMerlinWebsite() {
   const navItems = [
-    'Analyse',
-    'Nouvelles',
-    'Forex',
-    'Crypto',
-    'Options',
-    'Portefeuille',
-    'Risk',
-    'Blog',
-    '📘 Version Exclusive',
-    'Contact Whatsapp',
-    'Contactez-nous'
-  ];
+  'ACCUEIL',
+  'ACADÉMIE',
+  'LIVRES',
+  'RECHERCHE',
+  'CAPITAL LAB',
+  'À PROPOS',
+  'CONTACT'
+];
 
   const services = [
     {
@@ -75,16 +71,14 @@ export default function QuantMerlinWebsite() {
         <a
           key={item}
           href={
-            item === 'Analyse' ? '/analyse' :
-            item === 'Nouvelles' ? '/nouvelles' :
-            item === 'Forex' ? '/forex' :
-            item === 'Crypto' ? '/crypto' :
-            item === 'Options' ? '/options' :
-            item === 'Portefeuille' ? '/portefeuille' :
-            item === 'Risk' ? '/risk' :
-            item === 'Blog' ? '/blog' :
-            item === '📘 Version Exclusive' ? '/version-exclusive' :
-            item === 'Contact Whatsapp' ? 'https://wa.me/237656545451' : '/contact'
+            item === 'ACCUEIL' ? '/' :
+            item === 'ACADÉMIE' ? '/academy' :
+            item === 'LIVRES' ? '/books' :
+            item === 'RECHERCHE' ? '/research' :
+            item === 'CAPITAL LAB' ? '/capital-lab' :
+            item === 'À PROPOS' ? '/about' :
+            item === 'CONTACT' ? '/contact' :
+            '/'
           }
           className="hover:text-yellow-400 transition duration-200"
         >
