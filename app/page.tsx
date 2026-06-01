@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function QuantMerlinWebsite() {
   const navItems = [
     'Analyse',
@@ -8,6 +9,7 @@ export default function QuantMerlinWebsite() {
     'Portefeuille',
     'Risk',
     'Blog',
+    '📘 Version Exclusive',
     'Contact Whatsapp',
     'Contactez-nous'
   ];
@@ -59,13 +61,11 @@ export default function QuantMerlinWebsite() {
 </svg>
 
       <div>
-        <h1 className="text-2xl font-bold tracking-wide">
-          <span className="text-white">QuantMerlin</span>{' '}
-          <span className="text-yellow-400">Analytics</span>
+        <h1 className="text-2xl font-bold tracking-wide leading-tight">
+          <span className="block text-white">QUANTMERLIN</span>
+          <span className="block text-yellow-400">ANALYTICS</span>
         </h1>
-        <p className="text-sm text-gray-300">
-          Spécialiste en modélisation quantitative du risque
-        </p>
+      
       </div>
     </div>
 
@@ -83,6 +83,7 @@ export default function QuantMerlinWebsite() {
             item === 'Portefeuille' ? '/portefeuille' :
             item === 'Risk' ? '/risk' :
             item === 'Blog' ? '/blog' :
+            item === '📘 Version Exclusive' ? '/version-exclusive' :
             item === 'Contact Whatsapp' ? 'https://wa.me/237656545451' : '/contact'
           }
           className="hover:text-yellow-400 transition duration-200"
@@ -96,7 +97,7 @@ export default function QuantMerlinWebsite() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_rgba(250,204,21,0.4),_transparent_40%)]"></div>
+        <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(circle_at_top_right,_rgba(250,204,21,0.4),_transparent_40%)]"></div>
 
         <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -114,14 +115,20 @@ export default function QuantMerlinWebsite() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-2xl font-bold shadow-lg shadow-yellow-500/30 transition">
-                Commencer maintenant
-              </button>
+  <Link
+    href="/version-exclusive"
+    className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-2xl font-bold shadow-lg shadow-yellow-500/30 transition inline-block"
+  >
+    📘 Recevoir la Version Exclusive
+  </Link>
 
-              <button className="border border-yellow-500/40 hover:bg-yellow-500/10 px-6 py-3 rounded-2xl font-semibold transition">
-                Découvrir nos analyses
-              </button>
-            </div>
+  <Link
+    href="/analyse"
+    className="border border-yellow-500/40 hover:bg-yellow-500/10 px-6 py-3 rounded-2xl font-semibold transition inline-block"
+  >
+    📊 Découvrir nos analyses
+  </Link>
+</div>
           </div>
 
           <div className="relative">

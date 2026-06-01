@@ -6,6 +6,8 @@ export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
 
+    console.log("FORMULAIRE CONTACT RECU", { name, email });
+
     const adminEmail = await resend.emails.send({
       from: 'QuantMerlin Analytics <contact@quantmerlinanalytics.com>',
       to: process.env.CONTACT_EMAIL!,
